@@ -356,4 +356,56 @@ When I deploy YAML, request goes to API server → stored in etcd → scheduler 
 In production on EKS, I manage deployments through Helm and CI/CD pipelines where Kubernetes automatically handles rolling updates and self-healing.
 
 
-**29)Difference between Deployment and StatefulSet**
+1. Job
+
+A Kubernetes Job is used to run a task until it completes successfully.
+It creates one or more Pods and ensures the required number of successful completions.
+Example: database migration, batch processing, or one-time data processing.
+
+2. CronJob
+
+A CronJob runs Jobs automatically according to a defined schedule, similar to Linux cron.
+For example, 0 2 * * * can run a backup every day at 2 AM.
+CronJob → Job → Pod.
+
+3. NodeSelector
+
+NodeSelector is used to schedule a Pod only on nodes having specific labels.
+It is simple and provides basic node selection.
+Example: schedule a Pod only on nodes labeled disktype=ssd.
+
+4. Node Affinity
+
+Node Affinity is an advanced version of NodeSelector.
+It supports complex conditions and both required and preferred scheduling rules.
+It is useful when Pods need to be placed on specific types of nodes based on business or infrastructure requirements.
+
+5. Taint
+
+A taint is applied to a Kubernetes node to prevent Pods from being scheduled on it.
+It tells the scheduler that only Pods with a matching toleration should run there.
+Example: reserving specific nodes only for database workloads.
+
+6. Toleration
+
+A toleration is configured on a Pod to allow it to run on a node with a matching taint.
+It does not force the Pod onto that node; it only allows scheduling there.
+For dedicated workloads, we commonly use Taint + Toleration + Node Affinity.
+
+7. Cordon
+
+Cordon marks a node as unschedulable.
+New Pods will not be scheduled on that node, but existing Pods continue running normally.
+It is commonly used before node maintenance or upgrades.
+
+8. Drain
+
+Drain safely removes workloads from a node by evicting its Pods and preventing new Pods from being scheduled there.
+Pods managed by Deployments/ReplicaSets can be recreated on other suitable nodes.
+Before draining production nodes, check PDB, replicas, capacity, DaemonSets, and StatefulSets/PVs.
+
+9. Uncordon
+
+Uncordon makes a previously cordoned node schedulable again.
+New Pods can be scheduled onto the node after uncordoning.
+It does not automatically move existing Pods back to that node.
