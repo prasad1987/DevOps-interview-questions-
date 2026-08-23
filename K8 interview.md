@@ -355,6 +355,7 @@ When I deploy YAML, request goes to API server → stored in etcd → scheduler 
 
 In production on EKS, I manage deployments through Helm and CI/CD pipelines where Kubernetes automatically handles rolling updates and self-healing.
 
+==========================
 
 1. Job
 
