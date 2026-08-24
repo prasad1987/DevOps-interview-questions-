@@ -17,6 +17,38 @@ Interview Answer
 
 =======================================================
 
+Q2. How do you handle credentials securely in Jenkins?
+
+“I never hardcode credentials in the Jenkinsfile, Git repository, Dockerfile, or shell scripts.
+
+For Jenkins-specific credentials, I use Jenkins Credentials Manager and reference the credential by its ID. Jenkins injects the credential only during the required stage, and I make sure it isn’t printed in console logs.
+
+For enterprise secret management, especially when multiple applications or environments need secrets, I would integrate Jenkins with HashiCorp Vault or the organization’s approved secrets manager. Jenkins authenticates to Vault using an appropriate identity mechanism and retrieves only the required secret at runtime using a least-privilege policy.
+
+For AWS access, I prefer IAM roles with OIDC and short-lived STS credentials instead of storing long-lived AWS access keys in Jenkins.
+
+I also apply RBAC, least privilege, credential rotation, short TTLs where possible, audit logging, environment separation, and secret masking.
+
+If a secret is accidentally exposed, I treat it as compromised, immediately revoke or rotate it, investigate access logs, and fix the pipeline so it cannot happen again.”
+
+======================================================
+
+Q3. How does Jenkins authenticate to Vault and AWS?”
+
+“For Vault, I would use a machine authentication method such as AppRole, where Jenkins authenticates to Vault and receives a Vault token governed by Vault policies. Jenkins then retrieves only the required secrets.
+
+For AWS, I would avoid long-lived access keys and use OIDC with an IAM role. Jenkins presents an OIDC identity token, AWS STS validates the trust relationship, and STS provides temporary credentials for that IAM role. IAM policies then control what Jenkins can do in AWS.”
+
+Vault:
+
+Jenkins → Authentication → Vault Token → Vault Secrets
+
+AWS:
+
+Jenkins → OIDC → STS → IAM Role → Temporary Credentials → AWS
+
+=======================================================
+
 Q2. Jenkins pipeline needs a database password to deploy an application to EKS. Where would you store it and how would Jenkins retrieve it securely?
 
 “I would not store the database password in the Jenkinsfile or Git repository.
@@ -202,21 +234,6 @@ Say:
 
 ==================================================================
 
-Q8. How do you handle credentials securely in Jenkins?
-
-This is a high-priority question for your Mastercard interview because it connects Jenkins, AWS, Vault, IAM/OIDC and security.
-
-“I never hardcode credentials in the Jenkinsfile, Git repository, Dockerfile, or shell scripts.
-
-For Jenkins-specific credentials, I use Jenkins Credentials Manager and reference the credential by its ID. Jenkins injects the credential only during the required stage, and I make sure it isn’t printed in console logs.
-
-For enterprise secret management, especially when multiple applications or environments need secrets, I would integrate Jenkins with HashiCorp Vault or the organization’s approved secrets manager. Jenkins authenticates to Vault using an appropriate identity mechanism and retrieves only the required secret at runtime using a least-privilege policy.
-
-For AWS access, I prefer IAM roles with OIDC and short-lived STS credentials instead of storing long-lived AWS access keys in Jenkins.
-
-I also apply RBAC, least privilege, credential rotation, short TTLs where possible, audit logging, environment separation, and secret masking.
-
-If a secret is accidentally exposed, I treat it as compromised, immediately revoke or rotate it, investigate access logs, and fix the pipeline so it cannot happen again.”
 
 =================================================================
 
