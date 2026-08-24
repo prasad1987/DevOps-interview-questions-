@@ -86,6 +86,9 @@ Temporary Credentials
    
 AWS / Terraform
 
+You mean OIDC (OpenID Connect).
+OIDC acts like an identity proof. Jenkins tells AWS, ‘I am this trusted Jenkins system.’ AWS verifies that identity through the IAM role’s trust policy and gives Jenkins temporary credentials.”
+
 ==================================================================
 
 Q5. Explain Jenkins → Vault authentication and authorization.
