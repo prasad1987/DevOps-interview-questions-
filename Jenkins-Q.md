@@ -1,4 +1,4 @@
-Q. Explain your CI/CD pipeline in your current project.
+Q1. Explain your CI/CD pipeline in your current project.
 Interview Answer
 
 “In my current project, we follow a GitOps-based CI/CD pipeline using GitHub, Jenkins, Docker, Amazon ECR, Argo CD, and Amazon EKS.
@@ -15,8 +15,9 @@ Interview Answer
 
 6)“After deployment, we validate the rollout by checking pod status, rollout history, application logs, ALB target health, and Grafana dashboards. If any issue is detected, Argo CD or Kubernetes allows us to quickly roll back to the previous stable version. Throughout the pipeline, notifications about build status, deployment success, or failures are sent to Microsoft Teams or Slack, ensuring the team is informed in real time.”
 
+=======================================================
 
-Q1. Jenkins pipeline needs a database password to deploy an application to EKS. Where would you store it and how would Jenkins retrieve it securely?
+Q2. Jenkins pipeline needs a database password to deploy an application to EKS. Where would you store it and how would Jenkins retrieve it securely?
 
 “I would not store the database password in the Jenkinsfile or Git repository.
 
@@ -34,7 +35,7 @@ Interviewer: “Why shouldn’t Jenkins pass the DB password to Kubernetes?”
 
 ===================================================================
 
-Q2. What is the difference between Jenkins Credentials Manager and HashiCorp Vault?
+Q3. What is the difference between Jenkins Credentials Manager and HashiCorp Vault?
 
 “Jenkins Credentials Manager is primarily designed to securely store and provide credentials that Jenkins jobs need, such as SSH keys, API tokens, username/password credentials and secret files.
 
@@ -48,7 +49,7 @@ I also wouldn’t automatically put every credential into Vault. The choice depe
 
 ==================================================================
 
-Q3. Jenkins needs to deploy infrastructure to AWS. How would you authenticate Jenkins without storing AWS access keys?
+Q4. Jenkins needs to deploy infrastructure to AWS. How would you authenticate Jenkins without storing AWS access keys?
 
 This is very important for your interviews, especially given your previous interview feedback around IAM/OIDC.
 
@@ -70,7 +71,7 @@ Answer:
 
 ==================================================================
 
-Q4. Explain Jenkins → Vault authentication and authorization.
+Q5. Explain Jenkins → Vault authentication and authorization.
 
 This is probably the most important Vault question.
 
@@ -94,7 +95,7 @@ Say:
 
 ==================================================================
 
-Q5. A developer accidentally prints a secret in Jenkins logs. What do you do?
+Q6. A developer accidentally prints a secret in Jenkins logs. What do you do?
 
 This is a real production security scenario.
 
@@ -113,7 +114,7 @@ For prevention, I would review the pipeline to ensure secrets aren’t passed to
 ==================================================================
 
 
-Q6. Declarative vs Scripted Jenkins Pipeline
+Q7. Declarative vs Scripted Jenkins Pipeline
 
 
 “Jenkins supports two pipeline syntaxes: Declarative and Scripted.
@@ -181,7 +182,7 @@ Say:
 
 ==================================================================
 
-Q7. How do you handle credentials securely in Jenkins?
+Q8. How do you handle credentials securely in Jenkins?
 
 This is a high-priority question for your Mastercard interview because it connects Jenkins, AWS, Vault, IAM/OIDC and security.
 
@@ -199,7 +200,7 @@ If a secret is accidentally exposed, I treat it as compromised, immediately revo
 
 =================================================================
 
-Q8. Jenkins Pipeline Onboarding From Scratch
+Q9. Jenkins Pipeline Onboarding From Scratch
 
 When onboarding a new application into Jenkins, I first understand the application’s build, test, deployment, infrastructure and security requirements.
 
@@ -227,7 +228,7 @@ Finally, I configure approvals for production where required, notifications, mon
 
 =================================================================
 
-Q9. When onboarding a new microservice, I follow a standardized platform onboarding process.
+Q10. When onboarding a new microservice, I follow a standardized platform onboarding process.
 
 First, I understand the application’s requirements: traffic, ports, dependencies, database, availability requirements, SLOs, security requirements and environment requirements.
 
