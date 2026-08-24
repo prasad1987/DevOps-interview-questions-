@@ -23,15 +23,15 @@ Q2. Jenkins pipeline needs a database password to deploy an application to EKS. 
 
 If it’s a Jenkins-specific credential, I can store it in Jenkins Credentials Manager and reference it by credential ID.
 
-However, if the organization uses HashiCorp Vault as the centralized secrets platform, I would prefer storing the database secret in Vault. Jenkins would authenticate to Vault using an approved authentication method, receive a short-lived Vault token with a least-privilege policy, and retrieve the secret only during the deployment stage.
+we have HashiCorp Vault as the centralized secrets platform, I would prefer storing the database secret in Vault. Jenkins would authenticate to Vault using an approved authentication method, Vault token with a least-privilege policy, and retrieve the secret only during the deployment stage.
 
-The secret would be injected at runtime and never hardcoded or printed in the Jenkins console.
+The secret would be injected at runtime and we never hardcoded or printed in the Jenkins console.
 
 For an EKS application, I would also consider whether the application itself should retrieve the secret from Vault at runtime rather than passing the database password through Jenkins.”
 
 Interviewer: “Why shouldn’t Jenkins pass the DB password to Kubernetes?”
 
-“It can, but I would avoid unnecessarily exposing secrets through CI/CD. For workloads running on EKS, a stronger design is for the application to retrieve secrets at runtime using a workload identity and Vault integration, depending on the organization’s architecture.”
+“It can, but I would avoid unnecessarily exposing secrets through CI/CD. For applications running on EKS,the best practices is to retrieve secrets at runtime using a workload Vault integration, depending on the organization’s architecture.”
 
 ===================================================================
 
