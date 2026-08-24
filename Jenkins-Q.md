@@ -1,3 +1,21 @@
+Q. Explain your CI/CD pipeline in your current project.
+Interview Answer
+
+“In my current project, we follow a GitOps-based CI/CD pipeline using GitHub, Jenkins, Docker, Amazon ECR, Argo CD, and Amazon EKS.
+
+1) The process starts when a developer creates a feature branch, implements the code changes, and raises a Pull Request. Before the PR is merged, mandatory code reviews are performed and automated checks such as unit tests and SonarQube quality gates are executed. Once the PR is approved and merged into the main branch, GitHub triggers a Jenkins pipeline using webhooks.”
+
+2)“Jenkins first checks out the latest source code from GitHub and builds the application using Maven. then executes unit tests cases and generates the application artifact (JAR). Next, SonarQube performs static code analysis to detect bugs,duplicated code, and security vulnerabilities.
+
+3)“After the quality checks, Jenkins builds a Docker image using the application’s Dockerfile. The image is then scanned using Trivy to identify any critical vulnerabilities. If critical vulnerabilities are detected, the build is failed and the image is not pushed further.”
+
+4)“Once the image passes all security checks, Jenkins authenticates with Amazon ECR using an IAM role and pushes the versioned Docker image to the ECR repository. The pipeline then updates the Helm chart or Kubernetes deployment manifest with the new image tag and commits that change to our GitOps repository.”
+
+5)“Argo CD continuously monitors the GitOps repository. As soon as it detects the updated image tag, it compares the desired state stored in Git with the actual state of the EKS cluster and automatically synchronizes the changes. Kubernetes then performs a rolling update by creating new pods, waiting for their startup and readiness probes to succeed, gradually routing traffic to the new version, and finally terminating the old pods. This ensures zero downtime during deployment.”
+
+6)“After deployment, we validate the rollout by checking pod status, rollout history, application logs, ALB target health, and Grafana dashboards. If any issue is detected, Argo CD or Kubernetes allows us to quickly roll back to the previous stable version. Throughout the pipeline, notifications about build status, deployment success, or failures are sent to Microsoft Teams or Slack, ensuring the team is informed in real time.”
+
+
 Q1. Jenkins pipeline needs a database password to deploy an application to EKS. Where would you store it and how would Jenkins retrieve it securely?
 
 “I would not store the database password in the Jenkinsfile or Git repository.
