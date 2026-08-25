@@ -1,7 +1,7 @@
 "My approach is: Detect → Acknowledge → Assess Impact → Prioritize → Communicate → Investigate → Mitigate → Restore Service → RCA → Prevent Recurrence."
 
-Q1. Difference between Incident and Problem Management?
-
+**Q1. Difference between Incident and Problem Management?
+**
 Incident Management focuses on restoring service as quickly as possible when there is an outage or degradation. Problem Management focuses on finding the root cause and preventing the incident from happening again.
 
 Q2. What will you do when PagerDuty alerts at 2 AM?
