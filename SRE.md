@@ -79,6 +79,9 @@ SLA is the agreement with customers/business teams.
 Availability SLI = Successful requests / Total requests × 100.
 SLO compliance is calculated by comparing actual performance against the defined target.
 
+In my project, we use Prometheus and Grafana to measure service reliability. The main SLI we track is API availability and successful workflow processing. For example, if CMPA processes 99,900 successful requests out of 100,000 total requests, the availability SLI is 99.9%. We define an SLO of 99.9% monthly availability, meaning the service should remain available for at least 99.9% of the time. If the actual availability falls below 99.9%, it is considered an SLO breach. The SLA is the business commitment for service availability and incident response, and we monitor our SLI to ensure we meet the agreed SLO and SLA targets
+
+
 **11. What is MTTR and how do you reduce it?**
     
 MTTR (Mean Time To Recovery/Repair) is the average time taken to restore service after an incident.
