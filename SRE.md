@@ -97,3 +97,5 @@ Formula: MTTD = Total time to detect incidents / Number of incidents.
 I improve MTTD by implementing effective monitoring, alerting, dashboards, and log analysis.
 I configure proactive alerts based on SLI/SLO metrics like availability, latency, and errors.
 Better observability helps detect issues early before they impact customers.
+
+**13. MTTA -> mean time to acknowledge it**
