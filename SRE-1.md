@@ -4,7 +4,7 @@
 
 Incident Management focuses on restoring service as quickly as possible when there is an outage or degradation. Problem Management focuses on finding the root cause and preventing the incident from happening again.
 
-** 2. What will you do when PagerDuty alerts at 2 AM?**
+**2. What will you do when PagerDuty alerts at 2 AM?**
 
 First, acknowledge the alert and check the impact. Then verify dashboards, logs, Kubernetes pods, and infrastructure health. If required, engage relevant teams, mitigate the issue, restore service, and communicate updates to stakeholders.
 
@@ -36,24 +36,18 @@ I focus on restoring the service first and continue investigating in parallel. I
 
 A Major Incident is declared when there is significant business impact, critical service disruption, or widespread customer impact requiring urgent attention and cross-functional coordination. Typically P1 and some P2 incidents qualify as Major Incidents.
 
-Q10. Have you handled any production incident? Explain end-to-end.
+**10. Have you handled any production incident? Explain end-to-end.**
 
 Yes. I received a PagerDuty alert for high API latency in production. I acknowledged the alert, checked Grafana, logs, and Kubernetes pods, identified a bad deployment, rolled back the release, validated service recovery, communicated updates to stakeholders, closed the incident, and later participated in RCA and preventive action planning.
 
 
-Incident Management:
+**Incident Management:** Incident Management focuses on restoring the service as quickly as possible and minimizing business impact. The objective is recovery of the service, not necessarily finding the root cause.
 
-Incident Management focuses on restoring the service as quickly as possible and minimizing business impact. The objective is recovery of the service, not necessarily finding the root cause.
+**Problem Management:** Problem Management focuses on identifying the root cause of incidents and implementing preventive measures. It helps reduce recurring incidents and improves overall service stability.
 
-Problem Management:
+**Change Management:** Change Management ensures that modifications to applications, infrastructure, or configurations are implemented in a controlled and approved manner with minimal risk to production services. This includes approvals, testing, deployment planning, and rollback procedures.
 
-Problem Management focuses on identifying the root cause of incidents and implementing preventive measures. It helps reduce recurring incidents and improves overall service stability.
-
-Change Management:
-
-Change Management ensures that modifications to applications, infrastructure, or configurations are implemented in a controlled and approved manner with minimal risk to production services. This includes approvals, testing, deployment planning, and rollback procedures.
-
-Q11. How do you handle Incident Management in Production?
+**11. How do you handle Incident Management in Production?**
 
 When a production incident is reported through PagerDuty or monitoring tools, I first acknowledge the alert and assess the business impact. Then I verify application, infrastructure, Kubernetes pods, logs, and dashboards to identify the affected components. Based on the impact, I classify the incident severity (P1/P2/P3), create or update the incident ticket, and engage the required teams. My primary focus is to restore the service quickly using mitigation actions such as rollback, restart, scaling, or failover. Once the service is restored, I validate system health, communicate updates to stakeholders, and document the incident details. Finally, I participate in RCA and Problem Management activities to prevent similar incidents in the future
 
