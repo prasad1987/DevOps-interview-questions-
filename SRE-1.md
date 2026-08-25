@@ -52,3 +52,9 @@ Problem Management focuses on identifying the root cause of incidents and implem
 Change Management:
 
 Change Management ensures that modifications to applications, infrastructure, or configurations are implemented in a controlled and approved manner with minimal risk to production services. This includes approvals, testing, deployment planning, and rollback procedures.
+
+Q11. How do you handle Incident Management in Production?
+
+When a production incident is reported through PagerDuty or monitoring tools, I first acknowledge the alert and assess the business impact. Then I verify application, infrastructure, Kubernetes pods, logs, and dashboards to identify the affected components. Based on the impact, I classify the incident severity (P1/P2/P3), create or update the incident ticket, and engage the required teams. My primary focus is to restore the service quickly using mitigation actions such as rollback, restart, scaling, or failover. Once the service is restored, I validate system health, communicate updates to stakeholders, and document the incident details. Finally, I participate in RCA and Problem Management activities to prevent similar incidents in the future
+
+Alert → Acknowledge → Assess Impact → Prioritize → Communicate → Investigate → Mitigate → Restore → RCA → Prevent Recurrence
