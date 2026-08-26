@@ -2,10 +2,10 @@
    logs, and user experience. It uses OneAgent for automatic data collection and Davis AI for root cause analysis.
     In production environments, Dynatrace helps us quickly identify performance bottlenecks, reduce MTTR, monitor microservices, and improve application reliability."
 
-**Difference from Splunk (one-line interview answer):**
+   **Difference from Splunk (one-line interview answer):**
 
-Splunk is primarily used for log analytics, while Dynatrace provides full-stack observability including APM, 
-infrastructure monitoring, tracing, logs, and AI-driven root cause analysis.
+    Splunk is primarily used for log analytics, while Dynatrace provides full-stack observability including APM, 
+    infrastructure monitoring, tracing, logs, and AI-driven root cause analysis.
 
 
 2) **"SonarQube is a static code analysis** tool used to measure code quality and security.
