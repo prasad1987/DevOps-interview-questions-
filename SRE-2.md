@@ -48,7 +48,7 @@ Answer:
 
 ⸻
 
-9. How did you use Prometheus and Grafana for reliability?
+**9. How did you use Prometheus and Grafana for reliability?**
 
 Answer:
 
@@ -56,7 +56,7 @@ Answer:
 
 ⸻
 
-10. How did you communicate reliability risks to business stakeholders?
+**10. How did you communicate reliability risks to business stakeholders?**
 
 Answer:
 
@@ -64,7 +64,7 @@ Answer:
 
 ⸻
 
-12. What does end-to-end BAU ownership mean?
+**12. What does end-to-end BAU ownership mean?**
 
 Answer:
 
@@ -74,14 +74,14 @@ Answer:
 
 Monitoring / Reliability
 
-17. What metrics do you normally monitor?
+**17. What metrics do you normally monitor?**
 
 Answer:
 
 “I normally start with the four important areas: availability, traffic, latency and errors. I also monitor resource usage, application health and important business transactions. During an incident, these metrics help me understand when the problem started, how serious it is and whether the service is recovering. I also use them to check whether we are meeting our SLOs.”
 
 ⸻
-19. How do you know if an application is reliable?
+**19. How do you know if an application is reliable?**
 
 Answer:
 
@@ -89,7 +89,7 @@ Answer:
 
 ⸻
 
-21. How do you prepare an application for high traffic?
+**21. How do you prepare an application for high traffic?**
 
 Answer:
 
@@ -99,7 +99,7 @@ Answer:
 
 Governance / Compliance
 
-22. How did you work with security and compliance teams?
+**22. How did you work with security and compliance teams?**
 
 Answer:
 
@@ -107,7 +107,7 @@ Answer:
 
 ⸻
 
-23. How do you make production changes safely?
+**23. How do you make production changes safely?**
 
 Answer:
 
@@ -117,7 +117,7 @@ Answer:
 
 Business Impact
 
-24. Why is business impact important during an incident?
+**24. Why is business impact important during an incident?**
 
 Answer:
 
@@ -127,7 +127,7 @@ Answer:
 
 Mentoring
 
-25. How did you mentor junior engineers?
+**25. How did you mentor junior engineers?**
 
 Answer:
 
@@ -137,7 +137,7 @@ Answer:
 
 Senior-Level
 
-26. How do you balance reliability and release speed?
+**26. How do you balance reliability and release speed?**
 
 Answer:
 
