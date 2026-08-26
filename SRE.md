@@ -104,3 +104,26 @@ I configure proactive alerts based on SLI/SLO metrics like availability, latency
 Better observability helps detect issues early before they impact customers.
 
 **13. MTTA -> mean time to acknowledge it**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
