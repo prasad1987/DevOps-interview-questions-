@@ -1,4 +1,4 @@
-<img width="373" height="117" alt="image" src="https://github.com/user-attachments/assets/86d544e3-494b-4c33-83e8-de60553b958f" />**1. Production application is down. What will you do?**
+**1. Production application is down. What will you do?**
    
 First, I will acknowledge the incident and check monitoring alerts and dashboards.
 I will identify the impact using availability, error rate, latency, and transaction failure metrics.
