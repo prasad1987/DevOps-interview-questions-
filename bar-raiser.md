@@ -8,7 +8,7 @@ Answer:
 
 **2. Tell me about your most challenging project.**
 
-Answer:
+Answer: "In my current role, I created proactive monitoring and alerting solutions that helped reduce incident detection time and improved platform reliability for customers."
 “One of my challenging projects involved improving the deployment and operational process of a production application. There were multiple dependencies and failures could impact the deployment significantly. I took ownership of the CI/CD and deployment-related issues, improved validation and monitoring, and worked with different teams to resolve problems. The experience taught me the importance of automation, observability, and proactive problem-solving.”
 
 ⸻
