@@ -1,0 +1,51 @@
+# Category Mistake
+1 Alerting Mistakes Alerting on Symptoms Instead of Root Causes
+2 Alerting Mistakes No Alert Severity Tiers (Everything Is P1)
+3 Alerting Mistakes Missing Alert Ownership and Runbook Links
+4 Alerting Mistakes Copy-Pasted Thresholds Across Unrelated Services
+5 Alerting Mistakes No De-Duplication During Cascading Failures
+6 Alerting Mistakes Alerts Routed to Email Instead of a Paging Tool
+7 Alerting Mistakes Flapping Alerts Left Unresolved
+8 Metrics and Instrumentation Mistakes Not Monitoring the Four Golden Signals
+9 Metrics and Instrumentation Mistakes Missing Business-Level Metrics
+10 Metrics and Instrumentation Mistakes High-Cardinality Metrics Overloading the TSDB
+11 Metrics and Instrumentation Mistakes Metrics Collected but Never Graphed or Reviewed
+12 Metrics and Instrumentation Mistakes No Distributed Tracing Across Microservices
+13 Metrics and Instrumentation Mistakes Overly Aggressive Sampling Hiding Real Issues
+14 Metrics and Instrumentation Mistakes No Synthetic or Black-Box Monitoring
+15 Metrics and Instrumentation Mistakes Real User Monitoring (RUM) Ignored
+16 Dashboard and Visualization Mistakes Dashboard Sprawl With No Single Source of Truth
+17 Dashboard and Visualization Mistakes No Deployment Annotations on Dashboards
+18 Dashboard and Visualization Mistakes Vanity Metrics Dashboards Instead of Actionable Ones
+19 Dashboard and Visualization Mistakes No Mobile or On-Call-Friendly Dashboard View
+20 Dashboard and Visualization Mistakes Dashboards Not Updated After Architecture Changes
+21 Dashboard and Visualization Mistakes No Correlation Between Infrastructure and Application Dashboards
+22 Logging Mistakes Logs Not Centralized or Aggregated
+23 Logging Mistakes No Structured Logging (Plain Text Logs)
+24 Logging Mistakes Excessive Log Verbosity Drowning the Signal
+25 Logging Mistakes No Log Retention or Rotation Strategy
+26 Logging Mistakes Missing Correlation IDs Across Services
+27 Logging Mistakes Sensitive Data Logged, Forcing After-the-Fact Redaction
+28 Threshold, SLO, and Baseline Mistakes Static Thresholds Instead of Dynamic Baselines
+29 Threshold, SLO, and Baseline Mistakes No SLIs or SLOs Defined at All
+30 Threshold, SLO, and Baseline Mistakes Alert Thresholds Set Once and Never Revisited
+31 Threshold, SLO, and Baseline Mistakes Ignoring Seasonality and Batch/Cron Patterns
+32 Threshold, SLO, and Baseline Mistakes No Error Budget Policy Tied to Alerting or Release Decisions
+33 Threshold, SLO, and Baseline Mistakes Capacity and Saturation Metrics Ignored Until Too Late
+34 On-Call and Incident Response Mistakes No Documented On-Call Rotation or Escalation Policy
+35 On-Call and Incident Response Mistakes Alert Fatigue From Unactionable Pages
+36 On-Call and Incident Response Mistakes No Postmortem Process, So Outages Repeat
+37 On-Call and Incident Response Mistakes Missing Runbooks for Known Failure Modes
+38 On-Call and Incident Response Mistakes No Incident Communication Channel or Status Page
+39 On-Call and Incident Response Mistakes Single Point of Knowledge (Bus Factor of One)
+40 On-Call and Incident Response Mistakes No Chaos Engineering to Test Monitoring Under Failure
+41 Tooling and Infrastructure Mistakes Monitoring Stack Itself Is a Single Point of Failure
+42 Tooling and Infrastructure Mistakes Monitoring Deployed in the Same Failure Domain as Production
+43 Tooling and Infrastructure Mistakes No Meta-Monitoring of the Monitoring System
+44 Tooling and Infrastructure Mistakes Agent or Exporter Misconfiguration Silently Dropping Metrics
+45 Tooling and Infrastructure Mistakes No Monitoring Coverage for Third-Party Dependencies
+46 Tooling and Infrastructure Mistakes Cost-Driven Sampling That Blinds Visibility During Incidents
+47 Process and Culture Mistakes Monitoring Treated as an Afterthought, Added Post-Incident
+48 Process and Culture Mistakes No Clear Ownership Model ("Someone Else's Dashboard")
+49 Process and Culture Mistakes Monitoring Not Part of CI/CD or Definition of Done
+50 Process and Culture Mistakes No Regular Alert Reviews or Noise Pruning
